@@ -1,26 +1,51 @@
 version = 1
 
-exclude_patterns = [
-  "tools/analyzers/**",
-  "validator/keymanager/remote/keymanager_test.go",
-  "validator/web/site_data.go"
-]
+[[analyzers]]
+name = "solhint"
+type = "community"
 
 [[analyzers]]
-name = "go"
-enabled = true
-
-[analyzers.meta]
-import_paths = ["github.com/prysmaticlabs/prysm/v5"]
+name = "slither"
+type = "community"
 
 [[analyzers]]
-name = "test-coverage"
-enabled = true
+name = "dart-analyze"
+type = "community"
+
+[[analyzers]]
+name = "kube-linter"
+type = "community"
+
+[[analyzers]]
+name = "cfn-lint"
+type = "community"
 
 [[analyzers]]
 name = "shell"
-enabled = true
 
 [[analyzers]]
-name = "secrets"
-enabled = true
+name = "test-coverage"
+
+[[analyzers]]
+name = "terraform"
+
+[[analyzers]]
+name = "docker"
+
+[[analyzers]]
+name = "java"
+
+  [analyzers.meta]
+  runtime_version = "11"
+
+[[analyzers]]
+name = "python"
+
+  [analyzers.meta]
+  runtime_version = "3.x.x"
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "github.com/MonkeyMarcel/prysm"
